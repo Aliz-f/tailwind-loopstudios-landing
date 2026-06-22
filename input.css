@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme {
+    /* Breakpoints / Screens */
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 976px;
+    --breakpoint-xl: 1440px;
+
+    /* Custom Fonts */
+    --font-sans: "Josefin Sans", sans-serif;
+    --font-alata: Alata;
+}
+@layer base {
+    section {
+        @apply mb-10;
+    }
+}
+
+@layer utilities {
+    #hero {
+        background-image: url('../images/desktop/image-hero.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    @media (max-width: 576px) {
+        #hero {
+            background-image: url('../images/mobile/image-hero.jpg');
+            background-position: center;
+        }
+    }
+
+    .border-class {
+        @apply border-2 border-black;
+    }
+
+    .section-container {
+        @apply container
+        max-w-6xl
+        mx-auto
+        px-6
+        py-12;
+    }
+
+    .headers {
+        @apply max-w-lg
+        text-4xl
+        font-sans
+        font-light
+        uppercase
+        md:text-5xl
+    }
+
+    .image-titles {
+        @apply
+        uppercase
+        w-46
+        text-white
+        text-2xl
+        font-sans
+        font-light
+        tracking-wider
+        absolute
+        bottom-5 left-5
+        duration-200
+        group-hover:-translate-y-0.5
+        group-hover:text-black
+        group-hover:scale-110;
+    }
+
+    .item-gradient {
+        @apply absolute
+        top-0
+        bottom-0
+        right-0
+        left-0
+        bg-gradient-to-b
+        from-transparent
+        to-gray-900
+        group-hover:from-gray-50
+        group-hover:to-white
+        group-hover:opacity-70;
+    }
+
+    .hamburger{
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        transition: all 0.25s;
+        position: relative;
+    }
+
+    .hamburger-top,
+    .hamburger-middle,
+    .hamburger-bottom {
+        position: absolute;
+        width: 24px;
+        height: 2px;
+        top: 0;
+        left: 0;
+        background: #fff;
+        transform: rotate(0);
+        transition: all 0.5s;
+    }
+
+    .hamburger-middle {
+        transform: translateY(7px);
+    }
+
+    .hamburger-bottom {
+        transform: translateY(14px);
+    }
+
+    .open {
+        transform: rotate(90deg);
+    }
+
+    .open .hamburger-top {
+        transform: rotate(45deg) translateY(6px) translateX(6px);
+    }
+
+    .open .hamburger-middle {
+        display: none;
+    }
+
+    .open .hamburger-bottom {
+        transform: rotate(-45deg) translateY(6px) translateX(-6px);
+    }
+
+}

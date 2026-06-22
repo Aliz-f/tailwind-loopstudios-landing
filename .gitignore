@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production build outputs (Optional)
+# If you only want to track your source code and let a hosting platform build your CSS, 
+# uncomment the line below. If you want to keep the compiled css/style.css in the repo, leave it commented.
+# css/style.css
+
+# IDEs, editors, and system files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
